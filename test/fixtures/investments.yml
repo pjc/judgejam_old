@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  lender_id: 1
+  loan_id: 1
+
+two:
+  lender_id: 1
+  loan_id: 1
