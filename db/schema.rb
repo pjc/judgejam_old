@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130409011301) do
+ActiveRecord::Schema.define(:version => 20130409020612) do
 
   create_table "borrowers", :force => true do |t|
     t.string   "name"
@@ -47,6 +47,7 @@ ActiveRecord::Schema.define(:version => 20130409011301) do
     t.datetime "created_at",                   :null => false
     t.datetime "updated_at",                   :null => false
     t.integer  "borrower_id"
+    t.string   "award_pdf"
   end
 
 end
