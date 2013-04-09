@@ -1,0 +1,61 @@
+<%= form_for(@loan) do |f| %>
+  <% if @loan.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@loan.errors.count, "error") %> prohibited this loan from being saved:</h2>
+
+      <ul>
+      <% @loan.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :loan_url %><br />
+    <%= f.text_field :loan_url %>
+  </div>
+  <div class="field">
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :date_started %><br />
+    <%= f.date_select :date_started %>
+  </div>
+  <div class="field">
+    <%= f.label :loan_duration_in_days %><br />
+    <%= f.number_field :loan_duration_in_days %>
+  </div>
+  <div class="field">
+    <%= f.label :payment_cycle_in_days %><br />
+    <%= f.number_field :payment_cycle_in_days %>
+  </div>
+  <div class="field">
+    <%= f.label :interest_in_percent %><br />
+    <%= f.text_field :interest_in_percent %>
+  </div>
+  <div class="field">
+    <%= f.label :loan_amount_in_btc %><br />
+    <%= f.text_field :loan_amount_in_btc %>
+  </div>
+  <div class="field">
+    <%= f.label :amount_repaid_in_btc %><br />
+    <%= f.text_field :amount_repaid_in_btc %>
+  </div>
+  <div class="field">
+    <%= f.label :amount_due_in_btc %><br />
+    <%= f.text_field :amount_due_in_btc %>
+  </div>
+  <div class="field">
+    <%= f.label :days_late %><br />
+    <%= f.number_field :days_late %>
+  </div>
+  <div class="field">
+    <%= f.label :loan_description_by_borrower %><br />
+    <%= f.text_area :loan_description_by_borrower %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,43 @@
+<h1>Listing loans</h1>
+
+<table>
+  <tr>
+    <th>Loan url</th>
+    <th>Title</th>
+    <th>Date started</th>
+    <th>Loan duration in days</th>
+    <th>Payment cycle in days</th>
+    <th>Interest in percent</th>
+    <th>Loan amount in btc</th>
+    <th>Amount repaid in btc</th>
+    <th>Amount due in btc</th>
+    <th>Days late</th>
+    <th>Loan description by borrower</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @loans.each do |loan| %>
+  <tr>
+    <td><%= loan.loan_url %></td>
+    <td><%= loan.title %></td>
+    <td><%= loan.date_started %></td>
+    <td><%= loan.loan_duration_in_days %></td>
+    <td><%= loan.payment_cycle_in_days %></td>
+    <td><%= loan.interest_in_percent %></td>
+    <td><%= loan.loan_amount_in_btc %></td>
+    <td><%= loan.amount_repaid_in_btc %></td>
+    <td><%= loan.amount_due_in_btc %></td>
+    <td><%= loan.days_late %></td>
+    <td><%= loan.loan_description_by_borrower %></td>
+    <td><%= link_to 'Show', loan %></td>
+    <td><%= link_to 'Edit', edit_loan_path(loan) %></td>
+    <td><%= link_to 'Destroy', loan, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Loan', new_loan_path %>

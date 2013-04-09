@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  loan_url: MyString
+  title: MyString
+  date_started: 2013-04-09
+  loan_duration_in_days: 1
+  payment_cycle_in_days: 1
+  interest_in_percent: 1.5
+  loan_amount_in_btc: 1.5
+  amount_repaid_in_btc: 1.5
+  amount_due_in_btc: 1.5
+  days_late: 1
+  loan_description_by_borrower: MyText
+
+two:
+  loan_url: MyString
+  title: MyString
+  date_started: 2013-04-09
+  loan_duration_in_days: 1
+  payment_cycle_in_days: 1
+  interest_in_percent: 1.5
+  loan_amount_in_btc: 1.5
+  amount_repaid_in_btc: 1.5
+  amount_due_in_btc: 1.5
+  days_late: 1
+  loan_description_by_borrower: MyText
