@@ -1,5 +1,5 @@
 Judgejam::Application.routes.draw do
-  resources :loans
+  resources :borrowers
 
 
   # The priority is based upon order of creation:
