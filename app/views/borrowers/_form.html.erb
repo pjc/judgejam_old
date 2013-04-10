@@ -1,4 +1,4 @@
-<%= form_for(@borrower) do |f| %>
+<%= form_for(setup_borrower(@borrower)) do |f| %>
   <% if @borrower.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@borrower.errors.count, "error") %> prohibited this borrower from being saved:</h2>
@@ -16,6 +16,11 @@
     <%= f.text_field :name %>
   </div>
 
+	<%= f.fields_for :loans do |ff| %>
+	  <%= render 'partials/loan_fields', f: ff %>
+	<% end %>
+	
+										
   <div class="actions">
     <%= f.submit %>
   </div>

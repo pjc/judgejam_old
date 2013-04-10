@@ -2,13 +2,15 @@
 
 <table>
   <tr>
-    <th></th>
+	  <th>Name</th>
+    <th>Lender: amount_due_in_btc</th>
     <th></th>
     <th></th>
   </tr>
 
 <% @borrowers.each do |borrower| %>
   <tr>
+	  <td><%= borrower.name %></td>
     <td><%= link_to 'Show', borrower %></td>
     <td><%= link_to 'Edit', edit_borrower_path(borrower) %></td>
     <td><%= link_to 'Destroy', borrower, method: :delete, data: { confirm: 'Are you sure?' } %></td>

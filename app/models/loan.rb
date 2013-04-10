@@ -3,14 +3,16 @@ class Loan < ActiveRecord::Base
                   :amount_repaid_in_btc, 
                   :award_pdf,
                   :borrower_id,
-                  :date_started, :days_late, 
+                  :date_started, 
+                  :days_late, 
                   :interest_in_percent, 
                   :loan_amount_in_btc, 
                   :loan_description_by_borrower, 
                   :loan_duration_in_days, 
                   :loan_url, 
                   :payment_cycle_in_days, 
-                  :title            
+                  :title,
+                  :lenders_attributes          
   
   belongs_to :borrower
   has_many :investments
@@ -28,4 +30,6 @@ class Loan < ActiveRecord::Base
                         :loan_url, 
                         :payment_cycle_in_days, 
                         :title
+                        
+  accepts_nested_attributes_for :lenders
 end
